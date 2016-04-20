@@ -9,18 +9,26 @@ public class practice//main method required for every Java Program
 {
     public static void main (String[]args)
     {
-        int space = 8;
-        int line = 9;
-        int num = 9;
-        for (int x = 0; x < line; x++)
+        int counter1 = 1;
+        int counter2 = 5;
+        for (int a = 0; a < 10; a++)
         {
-            for (int y = 0; y < space; y ++)
+            if (a < 5)
             {
-                System.out.print("_");
+                for (int y = 0; y < counter1; y++)
+                {
+                    System.out.print(a);
+                }
+                counter1++;
             }
-            space--;
-            System.out.print(num);
-            num--;
+            else 
+            {
+                for (int z = counter2; z> 0; z-- )
+                {
+                    System.out.print(a);
+                }
+                counter2--;
+            }
             System.out.println();
         }
     }

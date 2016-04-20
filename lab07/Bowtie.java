@@ -12,6 +12,12 @@ public class Bowtie//main method required for every Java Program
         int space = 0;
         int nStars2 = 3;
         int counter = 0;
+        for (int x = 0; x < nStars; x++)
+        {
+            System.out.print("*");
+        }
+        System.out.println("\n_________\n");
+        
         for (int line = 0; line < 9; line++)
         {
             if (line < 4)
@@ -46,6 +52,29 @@ public class Bowtie//main method required for every Java Program
             }
             System.out.println();
             nStars = nStars - 2;
+        }
+        System.out.println("\n_________\n");
+        
+        while (true)
+        {
+            System.out.println("Choose an odd integer between 3-33");
+            boolean check = input.hasNextInt();
+            if (check)
+            {
+                nStars = input.nextInt();
+                if (nStars >= 3 && nStars <= 33 && nStars%2 == 1)
+                {
+                    for ()
+                }
+                else
+                {
+                    System.out.println("Enter an ODD integer in the range");
+                }
+            }
+            else
+            {
+                System.out.println("Enter an INTEGER");
+            }
         }
     }
 }
