@@ -43,7 +43,7 @@ public class CSE2Linear//main method required for every Java Program
         if (input.hasNextInt())// checks to see if the user input an int
         {
             int x = input.nextInt();// if integer was input saves as int
-            LinearSearch(array1, x);// calls on LinearSearch Method
+            BinarySearch(array1, x);// calls on LinearSearch Method
             Scramble(array1);// calls on Scramble Method
             System.out.println("Scrambled:");// prints "Scrambled:"
             System.out.println(Arrays.toString(array1));// coverts scrambled array to string statement to be printed out
@@ -94,5 +94,33 @@ public class CSE2Linear//main method required for every Java Program
             }
         }
         return array1;
+    }
+    public static void BinarySearch(int[] array2, int integer)
+    {
+        int highIndex = array2.length - 1;
+        int lowIndex = 0;
+        int counter = 0;
+        while (lowIndex <= highIndex)
+        {
+            counter++;
+            int midIndex = (highIndex + lowIndex)/2;
+            if (integer < array2[midIndex])
+            {
+                highIndex = midIndex - 1;
+            }
+            else if (integer > array2[midIndex])
+            {
+                lowIndex = midIndex + 1;   
+            }
+            else if (integer == array2[midIndex])
+            {
+                System.out.println(integer + " was found in " + counter + "iterations");
+                break;
+            }
+        }
+        if (lowIndex >= highIndex)
+        {
+            System.out.println(integer + " was not found in " + counter + " iterations");
+        }
     }
 }
