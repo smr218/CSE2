@@ -114,11 +114,11 @@ public class CSE2Linear//main method required for every Java Program
             }
             else if (integer == array2[midIndex])
             {
-                System.out.println(integer + " was found in " + counter + "iterations");
+                System.out.println(integer + " was found in " + counter + " iterations");
                 break;
             }
         }
-        if (lowIndex >= highIndex)
+        if (lowIndex > highIndex)
         {
             System.out.println(integer + " was not found in " + counter + " iterations");
         }
